@@ -1,1 +1,1 @@
-# SITL-HITL-Automation
+# sitl-hitl-automation

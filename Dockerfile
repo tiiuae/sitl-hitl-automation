@@ -20,6 +20,7 @@ RUN apt update && apt install -y \
     libglib2.0-dev \
     sudo \
     vim \
+    git \
     && apt clean \
     && rm -rf /var/lib/apt/lists/*  # Remove unnecessary apt cache
 

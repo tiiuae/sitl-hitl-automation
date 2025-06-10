@@ -21,6 +21,7 @@ RUN apt update && apt install -y \
     sudo \
     vim \
     git \
+    jq \
     && apt clean \
     && rm -rf /var/lib/apt/lists/*  # Remove unnecessary apt cache
 

@@ -104,7 +104,7 @@ do
             \"bootloader_url\":\"${BL_BUILD_URL}\",\
             \"bootloader_container\":\"${BL_ELF}\",\
             \"fpga_version\":\"${version}\",\
-            \"filename\":\"$(basename ${file})\"},"
+            \"filename\":\"$(realpath ${file})\"},"
 done
 # remove the last comma
 json_output="${json_output%,}"

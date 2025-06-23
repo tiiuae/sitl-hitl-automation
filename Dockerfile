@@ -1,5 +1,6 @@
 # Use Ubuntu as the base image
 FROM ubuntu:latest
+RUN echo "Before LABEL"
 LABEL org.opencontainers.image.source https://github.com/tiiuae/sitl-hitl-automation
 # Set environment variable for non-interactive installs
 ENV DEBIAN_FRONTEND=noninteractive

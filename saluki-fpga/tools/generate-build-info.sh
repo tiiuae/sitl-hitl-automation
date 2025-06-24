@@ -20,6 +20,7 @@ done
 variant_dir=$(echo $variant|tr _ -)
 subdir="${variant//-/_}-fpga"
 fpga_path=/firmware/combine/fpga/${variant}/firmware/${subdir}/
+echo "fpga_path: ${fpga_path}"
 
 find_bootloader=bootloader_v2/ssrc_$variant_dir
 

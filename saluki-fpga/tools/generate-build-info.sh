@@ -18,6 +18,8 @@ while [[ "$#" -gt 0 ]]; do
 done
 
 variant_dir=$(echo $variant|tr _ -)
+subdir="${variant//-/_}-fpga"
+fpga_path=/firmware/combine/fpga/${variant}/firmware/${subdir}/
 
 find_bootloader=bootloader_v2/ssrc_$variant_dir
 
@@ -104,7 +106,7 @@ do
             \"bootloader_url\":\"${BL_BUILD_URL}\",\
             \"bootloader_container\":\"${BL_ELF}\",\
             \"fpga_version\":\"${version}\",\
-            \"filename\":\"$(realpath ${file})\"},"
+            \"filename\":\"${fpga_path}${filename}\"},"
 done
 # remove the last comma
 json_output="${json_output%,}"

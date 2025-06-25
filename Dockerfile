@@ -5,6 +5,15 @@ LABEL org.opencontainers.image.source=https://github.com/tiiuae/sitl-hitl-automa
 # Set environment variable for non-interactive installs
 ENV DEBIAN_FRONTEND=noninteractive
 
+RUN apt update && apt install -y \
+  libxcb-cursor0 \
+  libxkbcommon-x11-0 \
+  libxcb-xinerama0 \
+  libxcb-icccm4 libxcb-image0 \
+  libxcb-keysyms1 libxcb-randr0 \
+  libxcb-render-util0 libxcb-xfixes0 \
+  libxcb-shm0
+  
 # Install dependencies and clean up cache in a single step
 RUN apt update && apt install -y \
     gdisk \

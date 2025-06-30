@@ -18,7 +18,7 @@ while [[ "$#" -gt 0 ]]; do
 done
 
 variant_dir=$(echo $variant|tr _ -)
-subdir="${variant//-/_}-fpga"
+subdir="${variant}_fpga"
 fpga_path=/firmware/combine/fpga/${variant_dir}/firmware/${subdir}/fpgajobfile/
 echo "fpga_path: ${fpga_path}"
 

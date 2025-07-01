@@ -20,7 +20,7 @@ for file in "$FIRMWARE_DIR"/*.px4; do
     filepath="$file"
     filepath=$(realpath "$filepath")
     # Extract hardware name from filename (assumes format: ssrc_<hw>.px4)
-    hw=$(echo "$filename" | sed -E 's/^ssrc_([^_]+-[^-]+)-.*/\1/') 
+    hw=$(echo "$filename" | sed -E 's/^ssrc_([^-]+-[^_]+(_[^_]+)*).*/\1/') 
     
     # Get the modification time (epoch)
     px4_build_time=$(stat -c %Y "$file")

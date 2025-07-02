@@ -96,6 +96,9 @@ function categorize_file( ) {
   echo $filetype
 }
 
+if [ "$variant" = "saluki-fmu2" ]; then
+    variant="himaya-fmu2"
+fi
 json_output="["
 for file in "${fpga_output_files[@]}"
 do
